@@ -1,0 +1,144 @@
+
+
+.container-fluid{
+
+	padding: 1% 5%;
+}
+
+
+#title
+{
+	background-color: #ff4c68;
+	color: white;
+}
+
+
+.ubu{
+
+	font-family: 'Montserrat-black', sans-serif;
+	line-height: 1.5;	
+	text-align: center;
+}
+
+
+.iphone{
+
+	transform: rotate(25deg);
+
+}
+
+
+@media	 (max-width:  1028px){
+
+	#title{
+		text-align: center;
+	}
+
+	.iphone{
+
+		position:  static;
+		transform: rotate(0deg	);
+	}
+}
+
+/*.............features section.......*/
+
+#features{
+
+	padding: 7% 15%;
+}
+
+.feature-box{
+
+	text-align: center;
+
+}
+
+.fet-font{
+
+	font-family: Montserrat-black;
+
+}
+
+p{
+
+	color: #8f8f8f;
+}
+
+.icon{
+
+	color: #ef8172;
+	margin-bottom: 1rem;
+}
+
+.icon:hover{
+	color: red;
+
+
+}
+
+
+/*.........testmonial section..............*/
+
+
+
+#testimonials{
+
+	padding: 7% 15%;
+	text-align: center;
+	background-color: #ff4c68;
+	color: white;
+}
+
+.tesh2{
+
+	font-family: Montserrat-black;
+	font-size: 3rem;
+	line-height: 1.5;
+
+}
+
+.test-img{
+
+	width: 20%;
+	border-radius: 100%;
+}
+
+#press{
+
+	text-align: center;
+	background-color: #ff4c68;
+
+	padding-bottom: 5%;
+}
+
+.press-logo{
+
+	width: 20%;
+	margin: 20px 20px 50px;
+}
+
+.carousel-item{
+		padding: 7% 15%;
+	padding-bottom: 10%;
+}
+
+#pricing{
+	padding: 7% 15%;
+}
+
+
+/*........last section.........*/
+
+
+#cta{
+	padding: 7% 15%;
+	 background-color: #ff4c68;
+	 text-align: center;
+
+}
+
+.ftext{
+	font-family: Montserrat-black;
+	color: white;
+}

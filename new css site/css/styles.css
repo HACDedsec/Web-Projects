@@ -1,0 +1,69 @@
+
+body{
+
+  margin: 0;
+  text-align: center;
+}
+
+h1{
+  width: 10%;
+  margin: 0 auto ;
+ font-family: 'Dancing Script', cursive;
+
+}
+
+.headings{
+
+  color: #1572A1;
+}
+
+.founder{
+
+  font-family: 'Quintessential', cursive;
+}
+
+
+
+div{
+  background-color: #9AD0EC;
+   
+}
+
+span{
+
+  color: red;
+}
+
+.top-cloud{
+
+  position: relative;
+  left:  200px;
+}
+
+.bottom-cloud{
+
+  position: absolute;
+}
+
+
+
+
+
+
+/*...........about me  .................*/
+
+.dedsec{
+float: left;
+position: relative;
+left: 20px;
+top : 20px;
+
+}
+
+.aboutmetext{
+
+  text-align: center;
+  font-family: 'Quintessential', cursive;
+  font-size: 30px;
+}
+

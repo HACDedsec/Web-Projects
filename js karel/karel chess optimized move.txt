@@ -1,0 +1,47 @@
+/**
+ * Welcome to the Stanford Karel IDE.
+ * This is a free space for you to 
+ * write any Karel program you want.
+
+/---------Best Optimized Move sort code by: Dedsec_HAC-----------/
+ **/
+function main(){
+   
+   fline();
+    sline();
+    fline();
+    sline();
+    fline();
+}
+
+
+function fline(){
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   move();
+   move();
+   putBeeper();
+   turnLeft();
+   move();
+}
+
+function sline(){
+   turnRight();
+   turnAround();
+   move();
+    putBeeper();
+   move();
+   move();
+    putBeeper();
+    move();
+    turnAround();
+    turnLeft();
+    move();
+    turnRight();
+    
+    
+}
+   
+
