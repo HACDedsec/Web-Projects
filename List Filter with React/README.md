@@ -6,6 +6,6 @@ This project was made with refrence learning of Udemy Course Link of course : ht
  ▬ Added search filter
  ▬ Imprted Google Fonts for changing Font Style
 
- • All Of the Running app is structured with Class Base Component
+ • This React app is structured with Class Base Component
 
 
