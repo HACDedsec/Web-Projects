@@ -4,7 +4,7 @@ This project was made with refrence learning from Udemy Course, Link of the Cour
  ▬ Fetching list of data from json file
  ▬ Added Personalize view with help of External and internal CSS
  ▬ Added search filter
- ▬ Imprted Google Fonts for changing Font Style
+ ▬ Imported Google Fonts for changing Font Style
 
  • This React app is structured with Class Base Component
 
