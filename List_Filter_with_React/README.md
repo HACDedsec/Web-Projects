@@ -1,4 +1,4 @@
-This project was made with refrence learning of Udemy Course Link of course : https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
+This project was made with refrence learning from Udemy Course, Link of the Course : https://www.udemy.com/course/complete-react-developer-zero-to-mastery/
 
  • This project follows basic functionality like 
  ▬ Fetching list of data from json file
