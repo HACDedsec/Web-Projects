@@ -1,41 +1,58 @@
-import "./App.css";
-import { useState, useEffect } from "react";
+import { Component } from "react";
 import Cardlist from "./components/Card-list/Card-list";
+import "./App.css";
 import Searchbox from "./components/Search-box/Search-box";
 
-const App = () => {
-  const [searchField, setSearchField] = useState("");
-  const [Robots, setRobots] = useState([]);
+class App extends Component {
+  constructor() {
+    super();
 
-  useEffect(() => {
+    this.state = {
+      people: [],
+      searchField: "",
+    };
+  }
+
+  componentDidMount() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.json())
-      .then((users) => setRobots(users));
-  }, []);
+      .then((users) =>
+        this.setState(() => {
+          return { people: users };
+        })
+      );
+  }
 
-  const onsearchChange = (event) => {
-    const searchFieldString = event.target.value.toLocaleLowerCase();
-    setSearchField(searchFieldString);
+  onsearchChange = (event) => {
+    const searchField = event.target.value.toLocaleLowerCase();
+    this.setState(() => {
+      return { searchField };
+    });
   };
 
-  const filterRobots = Robots.filter((Robots) => {
-    return Robots.name.toLocaleLowerCase().includes(searchField);
-  });
+  render() {
+    const { people, searchField } = this.state;
+    const { onsearchChange } = this;
 
-  return (
-    <div>
-      <header>
-        <h1 style={{ color: "white" }}>Search Anyone By Name </h1>
+    const filterpeople = this.state.people.filter((people) => {
+      return people.name.toLocaleLowerCase().includes(this.state.searchField);
+    });
 
-        <Searchbox
-          onChangeHandler={onsearchChange}
-          placeholder="Search Here"
-          className="search-box"
-        />
-        <Cardlist Robots={filterRobots} />
-      </header>
-    </div>
-  );
-};
+    return (
+      <div>
+        <header>
+          <h1 style={{ color: "white" }}>Search Anyone By Name </h1>
+
+          <Searchbox
+            onChangeHandler={onsearchChange}
+            placeholder="Search Here"
+            className="search-box"
+          />
+          <Cardlist people={filterpeople} />
+        </header>
+      </div>
+    );
+  }
+}
 
 export default App;

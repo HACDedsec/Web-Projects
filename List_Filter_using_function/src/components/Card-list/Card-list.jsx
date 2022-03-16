@@ -1,19 +1,17 @@
 import { Component } from "react";
 import "./card-list.styles.css";
 
-class Cardlist extends Component {
-  render() {
-    const { people } = this.props;
-
+const Cardlist = ({Robots}) => {
+  
     return (
       <div className="card-list">
-        {people.map((people) => {
-          const { name, email, id } = people;
+        {Robots.map((Robots) => {
+          const { name, email, id } = Robots;
 
           return (
             <div className="card-container" key={id}>
               <img
-                alt={`people ${name}`}
+                alt={`Robots ${name}`}
                 src={`https://robohash.org/${id}?set=set1&size=180x180`}
               />
               <h2>{name}</h2>
@@ -24,6 +22,4 @@ class Cardlist extends Component {
       </div>
     );
   }
-}
-
 export default Cardlist;
