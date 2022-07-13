@@ -1,0 +1,58 @@
+    <html>
+    <head>
+        <script>
+            var quotebox = [
+            { quote:"expense to earn",
+                author: "Dedsec"
+            },
+            { quote:"stay hungry stay foolish",
+                author: "Dedsec"
+            },
+            { quote:"its easy when you know what you want",
+                author: "Dedsec"
+            }    
+]
+
+            window.onload  = init;
+            function init() {
+                    generateQuote()
+            }
+            function generateQuote(){
+                let quoteSieze = quotebox.length;
+                let randomIndex = Math.floor(Math.random() * quoteSieze)
+                let randomQuoteData = quotebox[randomIndex];
+
+                let quoteApi = randomQuoteData.quote.replace( / /g, "%20");
+                let authorApi = randomQuoteData.author.replace( / /g, "%20");
+                let twitterLink = "https://twitter.com/intent/tweet?hashtags=quotes&related=freecodecamp&text="
+                
+                twitterLink += quoteApi
+                twitterLink+= " - "+ authorApi
+                
+                document.getElementById("tweet-quote").href= twitterLink;
+                document.getElementById("text").innerText = randomQuoteData.quote;
+                document.getElementById("author").innerText = randomQuoteData.author;
+   
+            }
+        </script>
+        <style>
+            *{
+                text-align: center;
+                font-size: 1.5rem;
+                margin: 50px 20px 20px 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <wrapper id="quote-box">
+            <div id="text"></div>
+            <div id="author"></div>
+            <button id="new-quote" onclick="generateQuote();">New Quote</button>
+            <a href="#" id="tweet-quote" target="_blank" >Tweet Quote</a>
+        </wrapper>
+
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    </body>
+
+    </html>
